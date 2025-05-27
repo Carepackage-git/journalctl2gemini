@@ -1,0 +1,19 @@
+May 27 14:32:10 debian kernel: [    0.123456] Initializing cgroup subsys cpuset
+May 27 14:32:10 debian systemd[1]: Starting Network Manager Script Dispatcher Service...
+May 27 14:32:10 debian NetworkManager[732]: <info>  [1653646330.1234] device (eth0): state change: unavailable -> disconnected (reason 'carrier-changed', sys-iface-state: 'managed')
+May 27 14:32:10 debian kernel: [    1.456789] usb 1-1: new high-speed USB device number 2 using ehci-pci
+May 27 14:32:11 debian systemd[1]: Started Daily apt download activities.
+May 27 14:32:12 debian sudo[901]:   user1 : TTY=pts/0 ; PWD=/home/user1 ; USER=root ; COMMAND=/bin/journalctl
+May 27 14:32:12 debian systemd[1]: Reloading OpenSSH Daemon.
+May 27 14:32:12 debian sshd[612]: Received SIGHUP; restarting.
+May 27 14:32:13 debian sshd[612]: Server listening on 0.0.0.0 port 22.
+May 27 14:32:13 debian sshd[612]: Server listening on :: port 22.
+May 27 14:32:14 debian systemd[1]: Started Run anacron jobs.
+May 27 14:32:15 debian CRON[982]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+May 27 14:32:16 debian kernel: [    5.012345] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+May 27 14:32:17 debian systemd[1]: Started Clean php session files.
+May 27 14:32:18 debian systemd[1]: Stopping User Manager for UID 1000...
+May 27 14:32:18 debian systemd[1]: Stopped User Manager for UID 1000.
+May 27 14:32:20 debian kernel: [    8.234567] audit: type=1101 audit(1653646340.123:42): pid=1032 uid=1000 auid=1000 ses=3 msg='op=PAM:accounting grantors=pam_localuser,pam_unix acct="user1" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+May 27 14:32:22 debian systemd[1]: Started CUPS Scheduler.
+May 27 14:32:24 debian systemd-timesyncd[312]: Synchronized to time server 162.159.200.123:123 (time.cloudflare.com)
