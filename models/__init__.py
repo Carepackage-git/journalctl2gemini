@@ -1,0 +1,1 @@
+from .JournalBrief import JournalBrief

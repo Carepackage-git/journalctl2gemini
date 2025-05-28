@@ -1,0 +1,8 @@
+Given the following journalctl log output, analyze it and respond using this exact format:
+
+Major errors & security incidents: [summary and suggested fix]
+Minor errors: [summary and suggested fix]
+Things to be aware of: [summary or notes. Fx. weird logs, warnings, etc. that are not errors but worth noting]
+Status: [summary of the system's current state. Fx. current state of script runs, services, etc.]
+Keep each section to two sentences maximum.
+Successful basic operations like time synchronization, network connectivity, and system uptime should not be mentioned unless there are issues.
