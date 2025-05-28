@@ -1,6 +1,7 @@
 from google import genai
 from google.genai import types
 from models import JournalBrief
+import subprocess
 
 # Load the API key from 'apikey.var'
 with open("apikey.var", "r", encoding="utf-8") as key_file:
@@ -9,11 +10,26 @@ with open("apikey.var", "r", encoding="utf-8") as key_file:
 # Initialize the Gemini client with the loaded API key
 client = genai.Client(api_key=api_key)
 
+def get_journalctl_logs():
+    # uses subprocess to fetch 50 lines of journalctl logs
+    try:
+        result = subprocess.run(
+            ["journalctl", "-n", "50", "--no-pager"],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        return result.stdout
+    except subprocess.CalledProcessError as e:
+        print(f"Error fetching journalctl logs: {e}")
+        return None
+    
 
 def JournalctlGeminiJSON():
-    #Placeholder for journalctl log fetching
-    with open("test.txt", "r", encoding="utf-8") as file:
-        log_contents = file.read()
+    log_contents = get_journalctl_logs()
+    if not log_contents:
+        print("No logs retrieved from journalctl.")
+        return None
         
     #Uses predefined specific prompt
     with open("prompts/journalctl.txt", "r", encoding="utf-8") as prompt_file:
