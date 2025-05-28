@@ -1,2 +1,4 @@
 apikey.var
 /.venv
+/__pycache__
+/models/__pycache__
